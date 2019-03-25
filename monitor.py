@@ -11,7 +11,7 @@ class EnergyMonitor():
             # print(self.systems[i].momentum())
             self.states[i].append(self.systems[i].momentum()[0])
 
-    def print_states(self, filename="energy.txt"):
+    def print_states(self, filename="logs/energy.txt"):
         with open(filename, 'w') as f:
             for state in self.states:
                 print(",".join([str(x) for x in state]), file=f)
